@@ -7,4 +7,4 @@ En este repositorio se desarrolla el primer capítulo de Flex y Bison, incluyend
 
 ## Ejemplos
 ### Ejemplo1.
-En este archivo [Ejemplo1](url)
+En este archivo [Ejemplo1]([url](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%201/fb1-1.l))
