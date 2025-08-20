@@ -22,9 +22,9 @@ Este codigo ejecuto de forma correcta sin ninguna novedad.
 ### Ejemplo2.
 El archivo [Ejemplo2](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%202/fb1-2.l) realiza sustituciones palabra por palabra: contiene reglas literales que reemplazan determinados términos en inglés por sus equivalentes, mientras que una regla . copia cualquier otro carácter para que el resto del texto permanezca igual. Las coincidencias son sensibles a mayúsculas y minúsculas (case-sensitive) y se aplican en una sola pasada sobre la entrada es decir, las sustituciones no se reescanean. La compilación y ejecución son idénticas a las del Ejemplo1; únicamente cambia el nombre del archivo a fb1-2.l.
 
-![Imagen2](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/commit/9d1337d499a787445c732d9e98a0b89b415569f5) 
+![Imagen2](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2019-50-16.png) 
 
 Este codigo ejecuto de forma correcta sin ninguna novedad. 
 
 ### Ejemplo 3.
-EL archivo 
+EL archivo [Ejemplo3](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%201/fb1-1.l)
