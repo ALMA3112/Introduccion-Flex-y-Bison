@@ -85,4 +85,14 @@ En esta nueva versión de la calculadora, respecto al Ejercicio1, se introdujero
 
 Ejecucion: 
 
-![Image2](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2023-26-42.png)
+![Image7](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2023-26-42.png)
+
+### Ejercicio3.
+El archivo [Ejercicio3.l](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejercicios/Ejercicio3/Ejercicio3.l) extiende las capacidades del analizador léxico de Ejercicio2.l al incluir dos nuevos operadores: && para la operación lógica AND y || para la operación lógica OR. El archivo [Ejercicio3.y](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejercicios/Ejercicio3/Ejercicio3.y) actualiza el analizador sintáctico para reconocer estos nuevos operadores, específicamente en la regla exp. La regla exp ahora incluye exp AND factor y exp OR factor, que realizan operaciones de AND bit a bit (&) y OR bit a bit (|), respectivamente, en los valores de los operandos. La estructura gramatical 
+exp maneja la suma, resta, AND y OR, mientras que factor maneja la multiplicación y división, lo que establece la precedencia de operadores, con la multiplicación y división teniendo una precedencia más alta.
+
+| como un operador OR binario, como en exp OR factor, se produciría un conflicto porque | ya está definido en el analizador léxico (.l) como el operador de valor absoluto (ABS). Esto significa que, cuando el analizador léxico encuentre el carácter |, siempre lo tokenizará como ABS, no como OR, lo que provocaría un error de sintaxis si se utiliza en la gramática de una manera que no sea el operador de valor absoluto unario. La única forma de usar | sin que sea un error es en la forma | term, donde actúa como operador de valor absoluto.Para que | funcione como un operador binario OR, se necesitaría una reestructuración de las reglas del analizador léxico y sintáctico. El analizador léxico tendría que diferenciar entre el uso unario y binario de |, o se necesitaría un nuevo token para el OR binario, por ejemplo || (como se hace en el Ejercicio3.l), que no entre en conflicto con el token ABS que ya existe.
+
+Ejecucion: 
+
+![Image8](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2023-45-37.png)
