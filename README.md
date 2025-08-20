@@ -34,4 +34,9 @@ EL archivo [Ejemplo3](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob
 La ejecucion de este programa tambien se hizo sin niguna novedad.
 
 ### Ejemplo 4. 
-El codigo implementando en Flex [Ejemplo3]()
+El codigo implementando en Flex [Ejemplo3](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%204/fb1-4.l) define un analizador léxico encargado de reconocer los diferentes tokens de una calculadora básica. En la sección de definiciones se declara un enumerado que asigna identificadores numéricos a los operadores y símbolos que se van a reconocer, como suma, resta, multiplicación, división, valor absoluto, números y fin de línea. Posteriormente, en la sección de reglas, se especifica cómo deben identificarse estos tokens en la entrada: los caracteres +, -, *, / y | se traducen en sus respectivos operadores, mientras que las secuencias de dígitos se convierten en números enteros que se almacenan en la variable yylval. Además, se maneja el salto de línea como fin de instrucción y se ignoran los espacios y tabulaciones. Para cualquier carácter no reconocido se imprime un mensaje de advertencia. Finalmente, en la función main, se ejecuta un ciclo que invoca repetidamente a yylex() para leer los tokens de la entrada, mostrando por pantalla el código del token correspondiente, y en el caso de los números también su valor entero. De esta forma, el programa constituye la primera fase de un compilador o intérprete: la análisis léxico, donde la entrada se convierte en una secuencia de símbolos significativos.
+
+Los comandos de ejecucion siguen siendo los mismos y lo unico que cambia es el nombre del archivo fb1-4.l
+
+
+
