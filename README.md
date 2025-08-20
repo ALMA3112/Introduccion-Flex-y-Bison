@@ -33,4 +33,5 @@ EL archivo [Ejemplo3](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob
 
 La ejecucion de este programa tambien se hizo sin niguna novedad.
 
-###Ejemplo 4. 
+### Ejemplo 4. 
+El codigo implementando en Flex [Ejemplo3]()
