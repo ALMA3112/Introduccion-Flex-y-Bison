@@ -43,4 +43,17 @@ Los comandos de ejecucion siguen siendo los mismos y lo unico que cambia es el n
 La ejecucion de este programa tambien se hizo sin niguna novedad.
 
 ### Ejemplo 5
-El código presentado en los archivos [fb1-5.l](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%205/fb1-5.l) y [fb1-5.y]() implementa un pequeño compilador de una calculadora mediante la combinación de Flex y Bison. El archivo léxico (fb1-5.l) se encarga de identificar los diferentes símbolos de la entrada, como los operadores aritméticos (+, -, *, /), el operador de valor absoluto (|), los números enteros y los saltos de línea, asignándoles un token definido en el archivo sintáctico. Por su parte, el archivo de gramática (fb1-5.y) define las reglas sintácticas que permiten reconocer expresiones aritméticas y calcular sus resultados respetando la jerarquía de operaciones: primero factores (multiplicación y división), luego expresiones con suma y resta, y finalmente términos como números o valores absolutos. La acción semántica asociada a cada producción evalúa la operación y devuelve el resultado, el cual se imprime al detectar el fin de una expresión. En conjunto, ambos módulos forman un sistema que primero realiza el análisis léxico para transformar la entrada en tokens, y luego el análisis sintáctico y semántico para construir y evaluar la expresión aritmética. De este modo, el programa ejemplifica cómo se integran las fases de un compilador para procesar y ejecutar instrucciones.
+El código presentado en los archivos [fb1-5.l](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%205/fb1-5.l) y [fb1-5.y](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%205/fb1-5.y) implementa un pequeño compilador de una calculadora mediante la combinación de Flex y Bison. El archivo léxico (fb1-5.l) se encarga de identificar los diferentes símbolos de la entrada, como los operadores aritméticos (+, -, *, /), el operador de valor absoluto (|), los números enteros y los saltos de línea, asignándoles un token definido en el archivo sintáctico. Por su parte, el archivo de gramática (fb1-5.y) define las reglas sintácticas que permiten reconocer expresiones aritméticas y calcular sus resultados respetando la jerarquía de operaciones: primero factores (multiplicación y división), luego expresiones con suma y resta, y finalmente términos como números o valores absolutos. La acción semántica asociada a cada producción evalúa la operación y devuelve el resultado, el cual se imprime al detectar el fin de una expresión. En conjunto, ambos módulos forman un sistema que primero realiza el análisis léxico para transformar la entrada en tokens, y luego el análisis sintáctico y semántico para construir y evaluar la expresión aritmética. De este modo, el programa ejemplifica cómo se integran las fases de un compilador para procesar y ejecutar instrucciones.
+
+En este ejemplo los comandos si cambiam.
+ ```
+  bison -d fb1-5.y
+  flex fb1-5.l
+  gcc fb1-5.tab.c lex.yy.c -lfl -o fb1-5
+  ./fb1-5
+ ```
+NO se tuvo en cuenta el comando que esta en el libro para el lex, ya que a la hora de ejecutarlo en terminal presentaba un error. Por esta razon se tuvieron en cuenta buscar por aparte y con el comando que esta ahi se ejecuto de forma correcta sin cambiar el codigo. En este ejercicio este fue el unico percanse que se tuvo y dificultad a la hora ejecutar el codigo en la terminal. 
+
+La ejecucion del codigo se ve de la sigueinte manera: 
+
+[Imagen5]()
