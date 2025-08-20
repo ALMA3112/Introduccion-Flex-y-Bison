@@ -26,3 +26,5 @@ El archivo [Ejemplo2](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob
 
 Este codigo ejecuto de forma correcta sin ninguna novedad. 
 
+### Ejemplo 3.
+EL archivo 
