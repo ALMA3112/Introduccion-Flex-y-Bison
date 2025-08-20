@@ -106,6 +106,11 @@ Sí, existen lenguajes para los cuales flex no sería una buena herramienta para
 Por ejemplo, lenguajes que requieren contar anidamientos de forma arbitraria, como cuando se deben reconocer cantidades balanceadas de paréntesis, llaves o corchetes, presentan problemas. Estos casos requieren memoria más allá de un autómata finito, lo cual flex no puede manejar directamente ya que carece de una pila como la que tienen los autómatas con pila.
 
 Además, lenguajes que permiten que la indentación o el espacio en blanco determine la estructura (como Python) no son adecuados para flex, ya que este tipo de análisis depende del contexto y no de patrones regulares simples. Lo mismo ocurre con algunos lenguajes de marcado o lenguajes naturales, donde el significado léxico depende fuertemente de la jerarquía y contexto más amplio del documento.
+
 ### Ejercicio 6.
 
+La versión en [C puro](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejercicios/Ejercicio6/contador.c) resulta más rápida que la de flex, especialmente al procesar archivos grandes, ya que aprovecha un control directo sobre la lectura mediante búferes grandes y evita la sobrecarga del analizador léxico generado. Sin embargo, escribir y depurar esta versión es más complejo, pues requiere manejar manualmente estados internos como la detección de palabras, el conteo de líneas y caracteres, así como la memoria y la apertura o cierre de archivos. En contraste, la versión con flex es más sencilla de implementar y mantener, ya que permite expresar las reglas de manera declarativa con expresiones regulares, aunque su desempeño es menor debido a la sobrecarga adicional que implica el motor de análisis. En conclusión, la versión en C ofrece mayor eficiencia, pero con un costo mayor en términos de dificultad de depuración y desarrollo.
 
+Ejecucion: 
+
+![Image9](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-20%2000-04-42.png)
