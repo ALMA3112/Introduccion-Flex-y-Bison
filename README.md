@@ -29,5 +29,8 @@ Este codigo ejecuto de forma correcta sin ninguna novedad.
 ### Ejemplo 3.
 EL archivo [Ejemplo3](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%203/fb1-3.l) implementa un analizador léxico que no solo permite copiar el texto de entrada o realizar sustituciones específicas, sino que además está preparado para reconocer números enteros, lo que amplía su capacidad de análisis frente a versiones más básicas. Esto se logra mediante la inclusión de una regla que identifica secuencias de dígitos y las procesa de manera explícita, diferenciándolas del resto de caracteres comunes. Un aspecto clave de este ejercicio es la adición de la función main, que convierte al archivo en un programa autónomo y ejecutable. En esta función se invoca a yylex(), lo que asegura que el flujo de ejecución inicie leyendo la entrada, aplique las reglas definidas y finalice correctamente al terminar el procesamiento. Con esta estructura, el código no depende de archivos externos para funcionar, y además adquiere mayor versatilidad al poder reconocer tanto texto como números dentro de la misma ejecución. La compilación y ejecución son idénticas a las del Ejemplo1; únicamente cambia el nombre del archivo a fb1-3.l.
 
-![Imagen3]() 
+![Imagen3](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2020-14-41.png) 
 
+La ejecucion de este programa tambien se hizo sin niguna novedad.
+
+###Ejemplo 4. 
