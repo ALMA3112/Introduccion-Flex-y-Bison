@@ -7,4 +7,4 @@ En este repositorio se desarrolla el primer capítulo de Flex y Bison, incluyend
 
 ## Ejemplos
 ### Ejemplo1.
-En este archivo [Ejemplo1](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%201/fb1-1.l)
+En este archivo [Ejemplo1](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejemplos/Ejemplo%201/fb1-1.l) el cual es un scanner sencillo escrito para **Flex**: cuenta  lineas, palbaras y caracteres. En la cabecera se inserta variables chars, words y lines, y en las reglas se tiene [a-zA-Z] la cual incrementa words y los suma **strlen(yytext)** a chars, \n incrementa chars y lines, y . incrementa chars para cualquier otro carácter. 
