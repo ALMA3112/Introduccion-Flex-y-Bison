@@ -60,7 +60,7 @@ La ejecucion del codigo se ve de la sigueinte manera:
 
 ## Ejercicios
 ### Ejercicio 1.
-En comparación con la versión anterior de la calculadora, en los archivos [Ejercicio1.y]() y Ejercicio1.l se introdujo un cambio importante: la incorporación del token COMMENT para reconocer comentarios en la entrada. En el analizador léxico (Ejercicio1.l), se agregó la regla "//".* que permite identificar cualquier línea que comience con // y marcarla como comentario. Por su parte, en el analizador sintáctico (Ejercicio1.y), se amplió la gramática con una nueva producción dentro de line, la cual acepta un COMMENT seguido de un salto de línea y lo ignora, es decir, no genera ninguna acción de cálculo. Gracias a esta modificación, la calculadora ahora puede recibir líneas de comentarios sin generar errores léxicos ni sintácticos, lo que representa una mejora respecto a la versión previa que no contemplaba este caso y trataba dichos caracteres como “misteriosos”.
+En comparación con la versión anterior de la calculadora, en los archivos [Ejercicio1.y](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejercicios/Ejercicio1/Ejercicio1.y) y [Ejercicio1.l](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejercicios/Ejercicio1/Ejercicio1.l) se introdujo un cambio importante: la incorporación del token COMMENT para reconocer comentarios en la entrada. En el analizador léxico (Ejercicio1.l), se agregó la regla "//".* que permite identificar cualquier línea que comience con // y marcarla como comentario. Por su parte, en el analizador sintáctico (Ejercicio1.y), se amplió la gramática con una nueva producción dentro de line, la cual acepta un COMMENT seguido de un salto de línea y lo ignora, es decir, no genera ninguna acción de cálculo. Gracias a esta modificación, la calculadora ahora puede recibir líneas de comentarios sin generar errores léxicos ni sintácticos, lo que representa una mejora respecto a la versión previa que no contemplaba este caso y trataba dichos caracteres como “misteriosos”.
 
 Respuestas a las preguntas:
 - ¿La calculadora aceptará una línea que contenga solo un comentario?
@@ -78,3 +78,11 @@ En este caso resulta más sencillo modificar el escáner, ya que los comentarios
 
 Ejecucion: 
 
+![Imagen6](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2023-16-02.png)
+
+### Ejercicio 2. 
+En esta nueva versión de la calculadora, respecto al Ejercicio1, se introdujeron cambios tanto en el analizador léxico como en el sintáctico. En el archivo [Ejercicio2.l](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejercicios/Ejercicio2/Ejercicio2.l), además de seguir reconociendo números decimales, se añadió una nueva regla para aceptar números en formato hexadecimal (0x o 0X seguidos de dígitos hexadecimales). Para ello se utilizó la función strtol de la librería estándar de C, que permite convertir la cadena leída en su equivalente entero. Por su parte, en el archivo [Ejercicio2.y](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Ejercicios/Ejercicio2/Ejercicio2.y), se modificó la acción asociada a la producción line para que, al mostrar el resultado de una expresión, además de imprimir el valor en decimal, también lo haga en representación hexadecimal usando el especificador %#lx. Con estas modificaciones, la calculadora ahora no solo evalúa expresiones aritméticas con números decimales, sino que también reconoce y procesa valores hexadecimales, mostrando el resultado en ambas bases. En síntesis, el cambio principal frente al Ejercicio1 es la extensión de la calculadora hacia el manejo de distintas bases numéricas, ampliando sus capacidades de análisis léxico y semántico.
+
+Ejecucion: 
+
+![Image2](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2023-26-42.png)
