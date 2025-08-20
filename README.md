@@ -56,4 +56,6 @@ NO se tuvo en cuenta el comando que esta en el libro para el lex, ya que a la ho
 
 La ejecucion del codigo se ve de la sigueinte manera: 
 
-[Imagen5]()
+[Imagen5](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2022-55-55.png)
+
+
