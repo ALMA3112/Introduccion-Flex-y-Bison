@@ -96,3 +96,16 @@ exp maneja la suma, resta, AND y OR, mientras que factor maneja la multiplicaci�
 Ejecucion: 
 
 ![Image8](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2023-45-37.png)
+
+### Ejercicio 4.
+No, la versión escrita a mano del escáner en el Ejemplo 1-4 no reconoce exactamente los mismos tokens que la versión hecha con flex. Aunque ambas cumplen la misma función general de identificar números, operadores y finales de línea, la versión con flex está diseñada para ser más precisa y consistente, ya que aprovecha expresiones regulares y las reglas de prioridad definidas en el archivo .l. La versión manual, al estar programada con estructuras condicionales, puede ser más propensa a ambigüedades o errores en casos límite (por ejemplo, espacios, caracteres no esperados o combinaciones inusuales de símbolos).
+
+### Ejercicio 5.
+Sí, existen lenguajes para los cuales flex no sería una buena herramienta para escribir un escáner. Flex está basado en expresiones regulares y autómatas finitos, lo que lo hace muy eficiente para lenguajes que pueden describirse con reglas léxicas claras y patrones regulares. Sin embargo, hay lenguajes cuya estructura léxica no puede expresarse únicamente mediante expresiones regulares.
+
+Por ejemplo, lenguajes que requieren contar anidamientos de forma arbitraria, como cuando se deben reconocer cantidades balanceadas de paréntesis, llaves o corchetes, presentan problemas. Estos casos requieren memoria más allá de un autómata finito, lo cual flex no puede manejar directamente ya que carece de una pila como la que tienen los autómatas con pila.
+
+Además, lenguajes que permiten que la indentación o el espacio en blanco determine la estructura (como Python) no son adecuados para flex, ya que este tipo de análisis depende del contexto y no de patrones regulares simples. Lo mismo ocurre con algunos lenguajes de marcado o lenguajes naturales, donde el significado léxico depende fuertemente de la jerarquía y contexto más amplio del documento.
+### Ejercicio 6.
+
+
