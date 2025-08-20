@@ -58,4 +58,23 @@ La ejecucion del codigo se ve de la sigueinte manera:
 
 ![Imagen5](https://github.com/ALMA3112/Introduccion-Flex-y-Bison/blob/main/Imagenes/Captura%20desde%202025-08-19%2022-55-55.png)
 
+## Ejercicios
+### Ejercicio 1.
+En comparación con la versión anterior de la calculadora, en los archivos Ejercicio1.y y Ejercicio1.l se introdujo un cambio importante: la incorporación del token COMMENT para reconocer comentarios en la entrada. En el analizador léxico (Ejercicio1.l), se agregó la regla "//".* que permite identificar cualquier línea que comience con // y marcarla como comentario. Por su parte, en el analizador sintáctico (Ejercicio1.y), se amplió la gramática con una nueva producción dentro de line, la cual acepta un COMMENT seguido de un salto de línea y lo ignora, es decir, no genera ninguna acción de cálculo. Gracias a esta modificación, la calculadora ahora puede recibir líneas de comentarios sin generar errores léxicos ni sintácticos, lo que representa una mejora respecto a la versión previa que no contemplaba este caso y trataba dichos caracteres como “misteriosos”.
+
+Respuestas a las preguntas:
+- ¿La calculadora aceptará una línea que contenga solo un comentario?
+
+Sí, en esta nueva versión lo hace. Antes no era posible porque ni el escáner ni el parser reconocían comentarios como una unidad válida, y por lo tanto generaban errores.
+
+- ¿Por qué antes no lo hacía?
+
+Porque la gramática anterior solo contemplaba expresiones, números, operadores y saltos de línea, sin dar un significado a secuencias como // texto. El analizador léxico simplemente detectaba caracteres no reconocidos y los reportaba como errores.
+
+- ¿Sería más fácil corregir esto en el escáner o en el parser?
+
+
+En este caso resulta más sencillo modificar el escáner, ya que los comentarios no son tokens relevantes para la semántica de la expresión: basta con que el analizador léxico los identifique y los ignore o los traduzca a un token COMMENT que el parser descarte. Esto evita complicar innecesariamente la gramática y mantiene el diseño más limpio.
+
+Ejecucion: 
 
